@@ -40,21 +40,24 @@ function generateReadme(answers){
     return `
 # ${answers.title}
 <br>
-
+<img src ="https://img.shields.io/github/followers/${username}?label=Follow&style=social">
+<img src ="https://img.shields.io/github/issues/gohucosta23/README-generator">
+<img src ="https://img.shields.io/github/forks/gohucosta23/README-generator">
+<img src ="https://img.shields.io/github/stars/gohucosta23/README-generator">
 ## Description
 <br>
 <p> ${answers.description}</p>
 <br>
-<img src ="https://img.shields.io/badge/Created%20by-Hugo%20Costa-orange">
+
 
 ## Table of Contents
 <ul>
-<li>${answers.installation}</li>
-<li>${answers.usage}</li>
-<li>${answers.License}</li>
-<li>${answers.contribution}</li>
-<li>${answers.test}</li>
-<li>${answers.questions}</li>
+<li><strong>Installation</strong></li>
+<li><strong>Usage</strong></li>
+<li><strong>License</strong></li>
+<li><strong>Tests</strong></li>
+<li><strong>Contributing</strong></li>
+<li><strong>Questions</strong></li>
 </ul>
 <br>
 
@@ -73,7 +76,12 @@ function generateReadme(answers){
 <p><strong>${answers.license}</strong></p>
 <br>
 
-## Contributors
+## Tests
+<br>
+<p>${answers.test}</p>
+<br>
+
+## Contributing
 <br>
 <p>${answers.contribution}</p>
 <br>
