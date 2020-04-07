@@ -23,27 +23,29 @@ function questions(){
 
    return inquirer.prompt([
 
-        {message : "What is the project title?", name : "title"},
-        {message : "What is the project description?", name : "description"},
-        {message : "What are the table of contents?", name : "table"},
-        {message : "Please describe the installation process", name : "installation"},
+        {message : "What is the project title? ", name : "title"},
+        {message : "What is the project description? ", name : "description"},
+        {message : "What are the table of contents? ", name : "table"},
+        {message : "Please describe the installation process: ", name : "installation"},
         {message : "Please describe the usage", name : "usage", default: "No usage avaible."},
-        {message : "What is the license for the process?", name : "License", default: "No license avaible."},
-        {message : "What was the contribution?", name : "contribution", default : "No contributors."},
-        {message : "Please describe the test", name : "test"},
-        {message : "Please describe any frequesntly asked questions", name : "questions", default: "No questions avaible."}
+        {message : "Please list any licenses: ", name : "License", default: "No license avaible."},
+        {message : "What was the contribution? ", name : "contribution", default : "No contributors."},
+        {message : "Please describe any tests: ", name : "test"},
+        {message : "Which Language did you use in your project? ", name : "language"}
     
     ]);
 }
 
 function generateReadme(answers){
     return `
+[![GitHub followers](https://img.shields.io/github/followers/${username}.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/${username}?tab=followers)
+[![GitHub forks](https://img.shields.io/github/forks/${username}/StrapDown.js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/${username})
+[![made-with-${answers.language}](https://img.shields.io/badge/Made%20with-${answers.language}-1f425f.svg)]
+[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://shields.io/)
+
 # ${answers.title}
 <br>
-<img src ="https://img.shields.io/github/followers/${username}?label=Follow&style=social">
-<img src ="https://img.shields.io/github/issues/gohucosta23/README-generator">
-<img src ="https://img.shields.io/github/forks/gohucosta23/README-generator">
-<img src ="https://img.shields.io/github/stars/gohucosta23/README-generator">
+
 ## Description
 <br>
 <p> ${answers.description}</p>
