@@ -24,8 +24,7 @@ inquirer
     axios.get(queryUrl).then(function(response){
         
         // getting the profile picture and putting into a variable
-        const githubPhoto = response.data.avatar_url;
-        console.log(response); 
+        const githubPhoto = response.data.avatar_url;        
     
 function questions(){
 
@@ -33,11 +32,10 @@ function questions(){
    return inquirer.prompt([
 
         {message : "What is the project title? ", name : "title"},
-        {message : "What is the project description? ", name : "description"},
-        {message : "What are the table of contents? ", name : "table"},
+        {message : "What is the project description? ", name : "description"},   
         {message : "Please describe the installation process: ", name : "installation"},
-        {message : "Please describe the usage", name : "usage", default: "No usage avaible."},
-        {message : "Please list any licenses: ", name : "License", default: "No license avaible."},
+        {message : "Please describe the usage: ", name : "usage", default: "No usage avaible."},
+        {message : "Please the license used: ", name : "License", default: "No license avaible."},
         {message : "What was the contribution? ", name : "contribution", default : "No contributors."},
         {message : "Please describe any tests: ", name : "test"},
         {message : "Which Language did you use in your project? ", name : "language"},
@@ -48,6 +46,7 @@ function questions(){
 // function to generate dynamically readme
 function generateReadme(answers){
     return `
+
 [![GitHub followers](https://img.shields.io/github/followers/${username}.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/${username}?tab=followers)
 [![GitHub forks](https://img.shields.io/github/forks/${username}/StrapDown.js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/${username})
 [![made-with-${answers.language}](https://img.shields.io/badge/Made%20with-${answers.language}-1f425f.svg)]
@@ -85,7 +84,7 @@ function generateReadme(answers){
 
 ## License
 <br>
-<p><strong>${answers.license}</strong></p>
+<p><strong>${answers.License}</strong></p>
 <br>
 
 ## Tests
