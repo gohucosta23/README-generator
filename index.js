@@ -25,7 +25,8 @@ inquirer
         
         // getting the profile picture and putting into a variable
         const githubPhoto = response.data.avatar_url;
-         
+        console.log(response); 
+    
 function questions(){
 
     // Questions that will be populated into the readme file
