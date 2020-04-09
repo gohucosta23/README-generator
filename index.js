@@ -49,8 +49,7 @@ function generateReadme(answers){
 
 [![GitHub followers](https://img.shields.io/github/followers/${username}.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/${username}?tab=followers)
 [![GitHub forks](https://img.shields.io/github/forks/${username}/StrapDown.js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/${username})
-[![made-with-${answers.language}](https://img.shields.io/badge/Made%20with-${answers.language}-1f425f.svg)]
-[![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://shields.io/)
+[![made-with-${answers.language}](https://www.google.com/search?sxsrf=ALeKk03CJev2vEQmChJVHosKhUSdewJBYw%3A1586455822935&source=hp&ei=DmWPXv7LNdaIytMPwKu82Aw&q=${answers.language}&oq=${answers.language}&gs_lcp=CgZwc3ktYWIQAzIECCMQJzIECCMQJzIECCMQJzIFCAAQkQIyBAgAEEMyBQgAEJECMgQIABBDMgQIABBDMgQIABBDMgQIABBDOgcIIxDqAhAnOgUIABCDAToCCABKJwgXEiMwZzExN2c4OGc5NWcxMDFnMTk3ZzIyMGc5OWc3OGc4MWc5M0oZCBgSFTBnMWcxZzFnMWcxZzFnMWcxZzFnMVCAGVjbJmCELmgCcAB4AIABzQGIAYkIkgEFNy4yLjGYAQCgAQGqAQdnd3Mtd2l6sAEK&sclient=psy-ab&ved=0ahUKEwj-ipm--NvoAhVWhHIEHcAVD8sQ4dUDCAk&uact=5)]
 
 # ${answers.title}
 <br>
@@ -104,7 +103,6 @@ function generateReadme(answers){
 }
 
 questions()
-
 .then(function(answers){
 
     const readme = generateReadme(answers);
