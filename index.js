@@ -99,7 +99,7 @@ function generateReadme(answers){
 ## Questions
 <br>
 <img src ="${githubPhoto}" alt = "Github profile picture">
-<a href = "mailto:${answers.email}">${answers.email}</a> `
+<a href = "mailto:${answers.email}"><Strong>You can email me here : ${answers.email}</strong></a> `
 }
 
 questions()
